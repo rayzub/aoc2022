@@ -17,7 +17,7 @@ const computePairsOutcome = (strategies: string): number => {
     .split("\n")
     .map((pair) => pair.split(" "))
     .map((round) => possiblePairOutcomes[round[0]][round[1]])
-    .reduce((roundA, roundB) => roundA + roundB, 0);
+    .reduce((a, b) => a + b, 0);
   return totalScoreOutcome;
 };
 

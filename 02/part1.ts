@@ -20,7 +20,7 @@ const computePairsOutcome = (strategies: string): number => {
   const choicePairs = strategies
     .split("\n")
     .map((pair) => possiblePairOutcomes[pair])
-    .reduce((a, b) => a + b);
+    .reduce((a, b) => a + b, 0);
   return choicePairs;
 };
 
