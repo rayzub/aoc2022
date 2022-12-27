@@ -5,7 +5,7 @@ const rawAssignments = (() =>
     .readFileSync(`${__dirname}/assignments.txt`, { encoding: "utf8" })
     .split("\n"))();
 
-const computeOverlappingAssignments = (assignments: string[]): number => {
+const computeLooseOverlappingAssignments = (assignments: string[]): number => {
   return (
     assignments
       .map((assignmentBlock) =>
@@ -22,4 +22,4 @@ const computeOverlappingAssignments = (assignments: string[]): number => {
   );
 };
 
-console.log(computeOverlappingAssignments(rawAssignments));
+console.log(computeLooseOverlappingAssignments(rawAssignments));
